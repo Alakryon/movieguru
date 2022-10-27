@@ -1,0 +1,20 @@
+.SearchBox {
+	width: 96vw;
+	height: 105px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#TextField {
+	flex-shrink: 1;
+	width: 82vw;
+}
+
+#SearchButton {
+	flex-shrink: 0;
+	margin-top: 10px;
+	margin-left: 2vw;
+	width: 10vw;
+}
