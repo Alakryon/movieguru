@@ -8,13 +8,12 @@
 }
 
 #TextField {
-	flex-shrink: 1;
+	flex-grow: 3;
 	width: 82vw;
 }
 
 #SearchButton {
-	flex-shrink: 0;
+	flex-grow: 3;
 	margin-top: 10px;
 	margin-left: 2vw;
-	width: 10vw;
 }

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 async function GraphQLRequest(url, query, parser, set_target) {
 	let response = undefined;
+	window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanel');
 	if (parser) {
 		axios({
 			url,
@@ -27,9 +28,11 @@ async function GraphQLRequest(url, query, parser, set_target) {
 						);
 					}
 				}
+				window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanelHidden');
 			})
 			.catch((error) => {
 				console.log('ERROR in GraphQLRequest:', url, query, error);
+				window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanelHidden');
 			});
 	} else {
 		try {
