@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import './SearchTextField.css';
 import { TextField } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 
 function ChangeSearchValue(event) {
 	window.MovieGuru.GlobalData.SearchValue = event.target.value;
@@ -18,14 +20,17 @@ function SearchTextField() {
 	window.MovieGuru.GlobalCode.SetSearchInputHelperText = new_state[1];
 
 	return (
-		<TextField
-			id="TextField"
-			variant="filled"
-			label="Please type in a movie title, then click on Search button or press Enter"
-			helperText={SearchInputHelperText}
-			onChange={ChangeSearchValue}
-			onKeyUp={SearchFieldKeyUp}
-		/>
+		<Paper id="TextFieldPaper" elevation={4}>
+			<TextField
+				id="TextField"
+				variant="filled"
+				label="Please type in a movie title, then click on Search button or press Enter"
+				helperText={SearchInputHelperText}
+				onChange={ChangeSearchValue}
+				onKeyUp={SearchFieldKeyUp}
+				error={!(SearchInputHelperText === '')}
+			/>
+		</Paper>
 	);
 }
 

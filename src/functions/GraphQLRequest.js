@@ -18,17 +18,10 @@ async function GraphQLRequest(url, query, parser, set_target) {
 					parser(result.data, set_target);
 				} else {
 					if (result.data.errors) {
-						console.log(
-							'ERROR in GraphQLRequest:\nURL:',
-							url,
-							'\nQUERY:',
-							query,
-							'ERROR:',
-							result.data.errors[0].message
-						);
+						console.log('ERROR in GraphQLRequest:\nURL:', url, '\nQUERY:', query, 'ERROR:', result.data.errors[0].message);
 					}
+					window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanelHidden');
 				}
-				window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanelHidden');
 			})
 			.catch((error) => {
 				console.log('ERROR in GraphQLRequest:', url, query, error);

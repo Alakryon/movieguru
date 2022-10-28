@@ -7,7 +7,7 @@
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background-color: rgb(200, 200, 200, 00);
+	background-color: rgb(100, 100, 100, 0);
 	color: rgb(50, 50, 50);
 	backdrop-filter: blur(2px);
 	z-index: 1000;

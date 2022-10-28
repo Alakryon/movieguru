@@ -7,11 +7,6 @@
 	justify-content: center;
 }
 
-#TextField {
-	flex-grow: 3;
-	width: 82vw;
-}
-
 #SearchButton {
 	flex-grow: 3;
 	margin-top: 10px;
