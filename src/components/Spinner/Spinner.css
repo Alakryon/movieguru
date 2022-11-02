@@ -13,6 +13,18 @@
 	z-index: 1000;
 }
 
+.Spinner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.SpinnerText {
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+
 .SpinnerImage {
 	height: 10vh;
 	pointer-events: none;
