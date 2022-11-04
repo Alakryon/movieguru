@@ -33,8 +33,8 @@ function DetailsPanel() {
 	let title_element = '-';
 	let genres_element = '-';
 	let score_element = '-';
-	let wiki_element = 'No Wikipedia page found.';
-	let tmdb_element = 'No TMDB page found.';
+	let wiki_element = <div className="dp_value">No Wikipedia page found.</div>;
+	let tmdb_element = <div className="dp_value">No TMDB page found.</div>;
 	let overview_element = '-';
 
 	if (movie_details?.movie) {

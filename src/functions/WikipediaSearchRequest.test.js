@@ -15,7 +15,6 @@ test('Calling with WikipediaSearchRequest with test parameters, checking result'
 		GlobalData: {
 			WikipediaSearchURL:
 				'https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=info|extracts|description&inprop=url&exintro&generator=search&gsrlimit=1000&gsrsearch=%27<MOVIETITLE>%27',
-			//TMDBMoviePageURL: `https://www.themoviedb.org/movie/<MOVIEID>`,
 		},
 	};
 

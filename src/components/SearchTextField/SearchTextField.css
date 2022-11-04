@@ -1,9 +1,17 @@
 #TextField {
+	font-size: 2vmin;
+	height: 2vmin;
 	border-radius: 5px;
 }
 
 #TextFieldPaper {
-	width: 100%;
+	flex-shrink: 0;
+	flex-grow: 3;
 	background-color: rgb(127, 189, 207);
 	color: rgb(50, 50, 50);
+}
+
+#TextField-label {
+	font-size: 2vmin;
+	height: 2vmin;
 }

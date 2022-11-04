@@ -1,15 +1,14 @@
 .SearchBox {
-	width: 96%;
-	height: 105px;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
-	justify-content: center;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 }
 
 #SearchButton {
-	margin-top: 10px;
-	margin-left: 10px;
+	font-size: 1.75vmin;
+	margin-left: 1.75vmin;
 	background-color: rgb(119, 178, 189);
-	min-width: min-content;
 }

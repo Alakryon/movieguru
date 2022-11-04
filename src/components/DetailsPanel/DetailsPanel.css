@@ -40,10 +40,10 @@
 	align-items: center;
 	justify-content: flex-start;
 	margin: 0;
-	padding-top: 1vh;
-	padding-bottom: 1vh;
-	padding-left: 1vw;
-	padding-right: 1vw;
+	padding-top: 1vmin;
+	padding-bottom: 1vmin;
+	padding-left: 1vmin;
+	padding-right: 1vmin;
 	width: 40vw;
 	background-color: rgb(170, 216, 224);
 	color: rgb(70, 70, 70);
@@ -55,17 +55,17 @@
 
 .dp_property {
 	color: rgb(120, 120, 120);
-	font-size: 11px;
-	margin-left: 3px;
-	margin-top: 3px;
-	margin-right: 3px;
+	font-size: 1.5vmin;
+	margin-left: 0.3vmin;
+	margin-top: 0.3vmin;
+	margin-right: 0.3vmin;
 }
 
 .dp_value {
-	font-size: 16px;
-	margin-left: 3px;
-	margin-bottom: 3px;
-	margin-right: 3px;
+	font-size: 2vmin;
+	margin-left: 0.3vmin;
+	margin-bottom: 0.3vmin;
+	margin-right: 0.3vmin;
 	flex-shrink: 0;
 }
 
@@ -102,7 +102,7 @@
 	width: 48%;
 	height: 100%;
 	text-align: left;
-	padding-bottom: 6px;
+	padding-bottom: 0.3vmin;
 }
 
 .dp_details_section {
@@ -113,7 +113,7 @@
 	text-align: start;
 	width: 48%;
 	height: 100%;
-	padding-bottom: 6px;
+	padding-bottom: 0.3vmin;
 }
 
 .dp_url_section {
@@ -124,7 +124,7 @@
 	text-align: start;
 	width: 96%;
 	height: auto;
-	padding-bottom: 6px;
+	padding-bottom: 0.3vmin;
 }
 
 .dp_overview_section {
@@ -139,13 +139,19 @@
 }
 
 #related_button {
-	margin-top: 12px;
-	margin-bottom: 6px;
+	margin-top: 2vmin;
+	margin-bottom: 1vmin;
 	background-color: rgb(119, 178, 189);
+	font-size: 1.75vmin;
 }
 
 #close_button {
 	position: relative;
 	top: 0px;
-	right: -20px;
+	right: -1vmin;
+}
+
+.MuiSvgIcon-root {
+	height: 2.5vmin !important;
+	width: 2.5vmin !important;
 }

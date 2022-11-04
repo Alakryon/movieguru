@@ -22,11 +22,12 @@
 
 .SpinnerText {
 	color: rgb(0, 0, 0);
+	font-size: 3vmin;
 	font-weight: bold;
 }
 
 .SpinnerImage {
-	height: 10vh;
+	height: 10vmin;
 	pointer-events: none;
 }
 
