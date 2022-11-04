@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import RootPanel from './RootPanel';
 
-test('renders learn react link', () => {
+test('Renders DetailsPanel with classname DetailsPanelHidden', async () => {
+	// Mocking external dependencies
+	window.MovieGuru = { GlobalCode: {} };
+
 	render(<RootPanel />);
-	//const linkElement = screen.getByText(/learn react/i);
-	//expect(linkElement).toBeInTheDocument();
+	let found = screen.getAllByText('Movie Guru');
+
+	expect(found.length).toBe(1);
 });

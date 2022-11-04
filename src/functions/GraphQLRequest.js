@@ -14,10 +14,10 @@ async function GraphQLRequest(url, query, parser, set_target) {
 			},
 		})
 			.then((result) => {
-				if (result.data.data !== null) {
+				if (result.data?.data !== null) {
 					parser(result.data, set_target);
 				} else {
-					if (result.data.errors) {
+					if (result.data?.errors) {
 						console.log('ERROR in GraphQLRequest:\nURL:', url, '\nQUERY:', query, 'ERROR:', result.data.errors[0].message);
 					}
 					window.MovieGuru.GlobalCode.SetBusyPanelClass('BusyPanelHidden');

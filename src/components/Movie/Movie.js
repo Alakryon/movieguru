@@ -1,12 +1,24 @@
-import { useState } from 'react';
 import './Movie.css';
 import { Paper } from '@material-ui/core';
 import { Divider } from '@material-ui/core';
-import { Button } from '@material-ui/core';
 
 function Movie(props) {
+	let click_handler = function (event) {
+		event.stopPropagation();
+		event.preventDefault();
+		window.MovieGuru.GlobalCode.SetDetailsPanelData(props.data);
+		window.MovieGuru.GlobalCode.SetDetailsPanelClass('DetailsPanel');
+	};
+
+	let title_element = '-';
 	let genres_element = '-';
-	if (props.data.movie.genres) {
+	let score_element = '-';
+
+	if (props?.data?.movie?.name) {
+		title_element = props.data.movie.name;
+	}
+
+	if (props?.data?.movie?.genres) {
 		if (Array.isArray(props.data.movie.genres)) {
 			for (let index = 0; index < props.data.movie.genres.length; index++) {
 				let genre = props.data.movie.genres[index];
@@ -18,47 +30,28 @@ function Movie(props) {
 			}
 		}
 	}
-	let wiki_element = 'No Wikipedia page found.';
-	if (props.data.wiki.url) {
-		wiki_element = (
-			<a href={props.data.wiki.url} target="_blank">
-				{props.data.wiki.url}
-			</a>
-		);
+
+	if (props?.data?.movie?.score) {
+		score_element = props.data.movie.score;
 	}
-	let tmdb_element = 'No TMDB page found.';
-	if (props.data.tmdb) {
-		tmdb_element = (
-			<a href={props.data.tmdb} target="_blank">
-				{props.data.tmdb}
-			</a>
-		);
-	}
+
 	return (
-		<Paper id="MoviePaper" variant="outlined">
+		<Paper id="MoviePaper" data-testid="Movie" variant="outlined">
 			<div className="title_section">
 				<span className="property">Title:</span>
-				{props.data.movie.name}
+				{title_element}
 			</div>
-			<Divider orientation="vertical" variant="middle" />
-			<div className="details_section">
+			<Divider orientation="vertical" variant="middle" flexItem />
+			<div className="genre_section">
 				<span className="property">Genre(s):</span>
 				{genres_element}
+			</div>
+			<Divider orientation="vertical" variant="middle" flexItem />
+			<div className="score_section">
 				<span className="property">Score:</span>
-				{props.data.movie.score}
+				{score_element}
 			</div>
-			<Divider orientation="vertical" variant="middle" />
-			<div className="overview_section">
-				<span className="property">Overview:</span>
-				{props.data.movie.overview ? props.data.movie.overview : '-'}
-			</div>
-			<Divider orientation="vertical" variant="middle" />
-			<div className="url_section">
-				<span className="property">Wikipedia URL:</span>
-				{wiki_element}
-				<span className="property">TMDB URL:</span>
-				{tmdb_element}
-			</div>
+			<span className="clickable" onClick={click_handler}></span>
 		</Paper>
 	);
 }

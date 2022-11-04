@@ -1,0 +1,151 @@
+.DetailsPanel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(80, 80, 80, 0);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 10;
+}
+
+.DetailsPanelHidden {
+	position: absolute;
+	top: 25vh;
+	left: 25vw;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(80, 80, 80, 0);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 0;
+}
+
+.DetailsContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	width: 40vw;
+	background-color: rgb(170, 216, 224);
+	color: rgb(70, 70, 70);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	filter: drop-shadow(5px 5px 10px rgb(20, 20, 20, 1));
+	border-radius: 6px;
+}
+
+.dp_property {
+	color: rgb(120, 120, 120);
+	font-size: 11px;
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+}
+
+.dp_value {
+	font-size: 16px;
+	margin-left: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	flex-shrink: 0;
+}
+
+.dp_url {
+	color: rgb(32, 68, 122);
+	cursor: pointer;
+}
+
+.row_div {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 96%;
+}
+
+#horizontal_divider {
+	width: 100%;
+	height: 1px;
+}
+
+#vertical_divider {
+	width: 1px;
+	height: 100%;
+}
+
+.dp_title_section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: start;
+	width: 48%;
+	height: 100%;
+	text-align: left;
+	padding-bottom: 6px;
+}
+
+.dp_details_section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: start;
+	width: 48%;
+	height: 100%;
+	padding-bottom: 6px;
+}
+
+.dp_url_section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: start;
+	width: 96%;
+	height: auto;
+	padding-bottom: 6px;
+}
+
+.dp_overview_section {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: start;
+	width: 96%;
+	height: auto;
+}
+
+#related_button {
+	margin-top: 12px;
+	margin-bottom: 6px;
+	background-color: rgb(119, 178, 189);
+}
+
+#close_button {
+	position: relative;
+	top: 0px;
+	right: -20px;
+}

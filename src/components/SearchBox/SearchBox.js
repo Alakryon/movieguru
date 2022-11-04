@@ -4,13 +4,9 @@ import SearchTextField from '../SearchTextField/SearchTextField';
 
 function SearchBox() {
 	return (
-		<div className="SearchBox">
+		<div className="SearchBox" data-testid="SearchBox">
 			<SearchTextField />
-			<Button
-				id="SearchButton"
-				variant="contained"
-				onClick={window.MovieGuru.GlobalCode.SearchForMovie}
-			>
+			<Button id="SearchButton" variant="contained" onClick={window.MovieGuru.GlobalCode.SearchForMovie}>
 				Search
 			</Button>
 		</div>

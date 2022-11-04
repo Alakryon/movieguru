@@ -1,10 +1,9 @@
 #TextField {
-	flex-grow: 3;
-	width: 82vw;
 	border-radius: 5px;
 }
 
 #TextFieldPaper {
+	width: 100%;
 	background-color: rgb(127, 189, 207);
 	color: rgb(50, 50, 50);
 }

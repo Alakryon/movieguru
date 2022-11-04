@@ -15,20 +15,22 @@ function SearchFieldKeyUp(event) {
 }
 
 function SearchTextField() {
-	let new_state = useState('');
-	let SearchInputHelperText = new_state[0];
-	window.MovieGuru.GlobalCode.SetSearchInputHelperText = new_state[1];
+	let helper_text_state = useState('');
+	let search_input_helper_text = helper_text_state[0];
+	window.MovieGuru.GlobalCode.SetSearchInputHelperText = helper_text_state[1];
 
 	return (
-		<Paper id="TextFieldPaper" elevation={4}>
+		<Paper id="TextFieldPaper" data-testid="TextFieldPaper" elevation={4}>
 			<TextField
 				id="TextField"
+				data-testid="SearchTextField"
+				fullWidth
 				variant="filled"
 				label="Please type in a movie title, then click on Search button or press Enter"
-				helperText={SearchInputHelperText}
+				helperText={search_input_helper_text}
 				onChange={ChangeSearchValue}
 				onKeyUp={SearchFieldKeyUp}
-				error={!(SearchInputHelperText === '')}
+				error={!(search_input_helper_text === '')}
 			/>
 		</Paper>
 	);

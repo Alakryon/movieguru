@@ -1,4 +1,4 @@
-function GenerateKey(result, target) {
+function GenerateKey() {
 	let key = window.MovieGuru.GlobalData.NextKey.toString();
 	window.MovieGuru.GlobalData.NextKey++;
 	return key;

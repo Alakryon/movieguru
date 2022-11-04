@@ -1,5 +1,5 @@
 .SearchBox {
-	width: 96vw;
+	width: 96%;
 	height: 105px;
 	display: flex;
 	flex-direction: row;
@@ -8,8 +8,8 @@
 }
 
 #SearchButton {
-	flex-grow: 3;
 	margin-top: 10px;
-	margin-left: 2vw;
+	margin-left: 10px;
 	background-color: rgb(119, 178, 189);
+	min-width: min-content;
 }

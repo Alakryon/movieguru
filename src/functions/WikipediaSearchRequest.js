@@ -9,7 +9,7 @@ async function WikipediaSearchRequest(url, parser, set_target) {
 			method: 'get',
 		})
 			.then((result) => {
-				if (result.status.toString() === '200') {
+				if (result.status?.toString() === '200') {
 					parser(result, set_target);
 				} else {
 					console.log('ERROR in WikipediaSearchRequest:\nURL:', url, 'ERROR:', result);
